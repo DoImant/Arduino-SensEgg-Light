@@ -1,0 +1,16 @@
+{
+	"folders": [
+    {
+      "path": "Arduino-SensEgg-Receiver"
+    },
+    {
+      "name": "TinyAVR-Sensegg-Light",
+      "path": "TinyAVR-Sensegg-Light"
+    },
+    {
+      "name": "SensEgg",
+      "path": "."
+    }
+  ],
+  "settings": {}
+}
