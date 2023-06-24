@@ -91,7 +91,7 @@ float rT, logRt, kelvin;   // for NTC temperature measurement
 
 RF24 radio(CE_PIN, CSN_PIN);   // define nRF24 radio object
 
-struct PaketStruktur   // with nRF24 max. 32Byte are allowed as packet
+struct SensorData   // with nRF24 max. 32Byte are allowed as packet
 {
   uint16_t Sensor_ID;   // Unique ID of the sender
   int16_t BME_Temp;
@@ -104,7 +104,7 @@ struct PaketStruktur   // with nRF24 max. 32Byte are allowed as packet
   int16_t Option2;
   int16_t Option3;
 };
-PaketStruktur payload = {SENSOR_ID, 22, 50, 999, 3, 0, 0, 0, 0, 0};
+SensorData payload = {SENSOR_ID, 22, 50, 999, 3, 0, 0, 0, 0, 0};
 //_______________________ ID   T   H    P   V ms T2  O  O  O __
 
 void ADCSetup_Vcc() {
