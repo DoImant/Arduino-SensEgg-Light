@@ -26,7 +26,7 @@ constexpr float DIVISOR {100.0};
 constexpr float DIVISOR_BAT {1000.0};
 constexpr uint8_t JSON_MEMORY {100};
 
-struct PaketStruktur   // with nRF24 max. 32Byte are allowed as packet
+struct SensorData   // with nRF24 max. 32Byte are allowed as packet
 {
   uint16_t Sensor_ID;   // Unique ID of the sender
   int16_t BME_Temp;
@@ -39,7 +39,7 @@ struct PaketStruktur   // with nRF24 max. 32Byte are allowed as packet
   int16_t Option2;
   int16_t Option3;
 };
-PaketStruktur payload = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+SensorData payload = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 //______________________ ID  T  H  P  V ms T2  O  O  O __
 
 RF24 radio(CE_PIN, CSN_PIN);   // define  nRF24-Radio-Object
