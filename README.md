@@ -6,6 +6,9 @@ The SensEgg-Light sensor is used to record temperature, humidity and air pressur
 
 The measurement data is sent to a receiver every minute with an nRF24 transmitter.
 
+The receiver software can be used to process the Sens-Egg data with ioBroker:
+[Link to scripts for use with ioBroker](https://github.com/DoImant/iobroker.scripts).
+
 ## Pictures
 
 Sensegg Ligt without BME280 and NTC (ATtiny1604 µController).  
