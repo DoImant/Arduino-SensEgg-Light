@@ -26,7 +26,7 @@ constexpr float DIVISOR {100.0};
 constexpr float DIVISOR_BAT {1000.0};
 constexpr uint8_t JSON_MEMORY {100};
 
-struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 24 Bytes used (32Bit boundaries possible)
+struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 20 Bytes used (32Bit boundaries possible)
 {
   uint16_t Sensor_ID;   // Unique ID of the sender
   int16_t Option1;
@@ -37,11 +37,9 @@ struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 24 Bytes us
   uint16_t ON_time;
   int16_t NTC_Temp;
   int16_t Option2;
-  int16_t Option3;
-  int16_t Option4;
 };
-SensorData payload = {0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-//__________________  ID  O  T  H  P  V ms T2  O  O  0__
+SensorData payload = {0 , 0, 0, 0, 0, 0, 0, 0, 0};
+//__________________  ID  O  T  H  P  V ms T2  O__
 
 RF24 radio(CE_PIN, CSN_PIN);   // define  nRF24-Radio-Object
 // byte addresses[][6] = {"1RF24", "2RF24"};   // Addresses for transmitters and receivers
