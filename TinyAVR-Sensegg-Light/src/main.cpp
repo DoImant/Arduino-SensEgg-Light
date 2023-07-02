@@ -103,8 +103,8 @@ struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 20 Bytes us
   int16_t Option1;
   int16_t Option2;
 };
-SensorData payload = {SENSOR_ID, 0, 22, 50, 999, 3, 0, 0, 0};
-//____________________    ID     O  T   H    P   V ms T2  O
+SensorData payload = {SENSOR_ID, 22, 999, 50, 3, 0, 0, 0, 0};
+//____________________    ID     T    P   H   V ms T2  O  O
 
 void ADCSetup_Vcc() {
   VREF.CTRLA = VREF_ADC0REFSEL_1V5_gc;                     // 1.5V Reference

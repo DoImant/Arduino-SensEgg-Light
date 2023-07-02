@@ -39,7 +39,7 @@ struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 20 Bytes us
   int16_t Option2;
 };
 SensorData payload = {0 , 0, 0, 0, 0, 0, 0, 0, 0};
-//__________________  ID  O  T  H  P  V ms T2  O__
+//__________________  ID  T  P  H  V ms T2  O  0__
 
 RF24 radio(CE_PIN, CSN_PIN);   // define  nRF24-Radio-Object
 // byte addresses[][6] = {"1RF24", "2RF24"};   // Addresses for transmitters and receivers
