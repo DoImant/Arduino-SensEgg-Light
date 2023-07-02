@@ -94,13 +94,13 @@ RF24 radio(CE_PIN, CSN_PIN);   // define nRF24 radio object
 struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 20 Bytes used (32Bit boundaries possible)
 {
   uint16_t Sensor_ID;   // Unique ID of the sender
-  int16_t Option1;
   int16_t BME_Temp;
-  uint16_t BME_Humi;
   uint32_t BME_Druck;
+  uint16_t BME_Humi;
   uint16_t Vcc;
   uint16_t ON_time;   // Switch-on time, will be sent with the next transmission
   int16_t NTC_Temp;
+  int16_t Option1;
   int16_t Option2;
 };
 SensorData payload = {SENSOR_ID, 0, 22, 50, 999, 3, 0, 0, 0};

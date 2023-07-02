@@ -29,13 +29,13 @@ constexpr uint8_t JSON_MEMORY {100};
 struct SensorData   // with nRF24 max. 32Byte are allowed as packet, 20 Bytes used (32Bit boundaries possible)
 {
   uint16_t Sensor_ID;   // Unique ID of the sender
-  int16_t Option1;
   int16_t BME_Temp;
-  uint16_t BME_Humi;
   uint32_t BME_Druck;
+  uint16_t BME_Humi;
   uint16_t Vcc;
   uint16_t ON_time;
   int16_t NTC_Temp;
+  int16_t Option1;
   int16_t Option2;
 };
 SensorData payload = {0 , 0, 0, 0, 0, 0, 0, 0, 0};
