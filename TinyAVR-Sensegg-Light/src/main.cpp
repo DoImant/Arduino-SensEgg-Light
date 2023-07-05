@@ -23,7 +23,7 @@
 // Set basic data per sensor here
 #if (SENSOR_ID == 201)
 //constexpr float NTC_R {10006.0};                      // Measured resistance for the NTC temperature sensor
-constexpr float NTC_R {10080.0};                      // Measured resistance for the NTC temperature sensor
+constexpr float NTC_R {10080.0};
 constexpr rf24_pa_dbm_e RF24_SENDPWR {RF24_PA_MAX};   // Define transmit power (RF24_PA_MAX(3)),
                                                       // (RF24_PA_HIGH(2)), (RF24_PA_LOW(1)), (RF24_PA_MIN(0))
 uint8_t addresses[][6] = {"0Base", "1SEgg"};          // Addresses for sender and receiver;
