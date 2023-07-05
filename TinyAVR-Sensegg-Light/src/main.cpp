@@ -22,12 +22,14 @@
 // #define SENSOR_ID via the build_flags in the platormio.ini file
 // Set basic data per sensor here
 #if (SENSOR_ID == 201)
-constexpr float NTC_R {10006.0};                      // Measured resistance for the NTC temperature sensor
+//constexpr float NTC_R {10006.0};                      // Measured resistance for the NTC temperature sensor
+constexpr float NTC_R {10080.0};                      // Measured resistance for the NTC temperature sensor
 constexpr rf24_pa_dbm_e RF24_SENDPWR {RF24_PA_MAX};   // Define transmit power (RF24_PA_MAX(3)),
                                                       // (RF24_PA_HIGH(2)), (RF24_PA_LOW(1)), (RF24_PA_MIN(0))
 uint8_t addresses[][6] = {"0Base", "1SEgg"};          // Addresses for sender and receiver;
 #elif (SENSOR_ID == 202)
-constexpr float NTC_R {10003.0};
+//constexpr float NTC_R {10003.0};
+constexpr float NTC_R {10120.0};
 constexpr rf24_pa_dbm_e RF24_SENDPWR {RF24_PA_LOW};
 uint8_t addresses[][6] = {"0Base", "2SEgg"};
 #elif (SENSOR_ID == 203)
@@ -233,7 +235,7 @@ void loop() {
       analogReference(VDD);
       ADC0.CTRLA &= ~ADC_ENABLE_bm;             // Switch off ADC
       BME280setup();                            // BME280 wake
-      payload.BME_Temp = BME280temperature();   // BME supplies four-digit ntcTemperature (2 decimal points)
+      payload.BME_Temp = BME280temperature();   // BME supplies four-digit Temperature (2 decimal points)
       payload.BME_Humi = BME280humidity();
       payload.BME_Druck = BME280pressure();   // Air pressure conversion to NN on the target system
       BME280sleep();
